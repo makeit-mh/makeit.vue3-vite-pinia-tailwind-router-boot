@@ -3,5 +3,5 @@
 
 
 echo "husky commit-msg-lint start"
-yarn lint-staged
+npx --no -- commitlint --edit ""
 echo "husky commit-msg-lint end"
