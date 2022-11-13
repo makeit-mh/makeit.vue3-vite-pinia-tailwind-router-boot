@@ -1,14 +1,23 @@
+<script>
+export default {
+  name: "DashboardCard13",
+};
+</script>
+
 <template>
   <div class="col-span-full xl:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
     <header class="px-5 py-4 border-b border-gray-100">
-      <h2 class="font-semibold text-gray-800">Income/Expenses</h2>
+      <h2 class="font-semibold text-gray-800">
+        Income/Expenses
+      </h2>
     </header>
     <div class="p-3">
-
       <!-- Card content -->
       <!-- "Today" group -->
       <div>
-        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">Today</header>
+        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">
+          Today
+        </header>
         <ul class="my-1">
           <!-- Item -->
           <li class="flex px-2">
@@ -19,7 +28,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Qonto</a> billing</div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Qonto</a> billing
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-gray-800">-$49.88</span>
                 </div>
@@ -35,7 +46,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Cruip.com</a> Market Ltd 70 Wilson St London</div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Cruip.com</a> Market Ltd 70 Wilson St London
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-green-500">+249.88</span>
                 </div>
@@ -51,7 +64,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Notion Labs Inc</a></div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Notion Labs Inc</a>
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-green-500">+99.99</span>
                 </div>
@@ -67,7 +82,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Market Cap Ltd</a></div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Market Cap Ltd</a>
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-green-500">+1,200.88</span>
                 </div>
@@ -83,7 +100,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">App.com</a> Market Ltd 70 Wilson St London</div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">App.com</a> Market Ltd 70 Wilson St London
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-gray-800 line-through">+$99.99</span>
                 </div>
@@ -99,7 +118,9 @@
             </div>
             <div class="grow flex items-center text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">App.com</a> Market Ltd 70 Wilson St London</div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">App.com</a> Market Ltd 70 Wilson St London
+                </div>
                 <div class="shrink-0 self-start ml-2">
                   <span class="font-medium text-gray-800">-$49.88</span>
                 </div>
@@ -108,13 +129,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'DashboardCard13',
-}
-</script>

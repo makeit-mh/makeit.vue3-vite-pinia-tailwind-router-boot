@@ -1,31 +1,26 @@
-<template>
-  <canvas ref="canvas" :data="data" :width="width" :height="height"></canvas>
-</template>
-
 <script>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from "vue";
 import {
-  Chart, BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend,
-} from 'chart.js'
-import 'chartjs-adapter-moment'
+  BarController, BarElement, Chart, Legend, LinearScale, TimeScale, Tooltip,
+} from "chart.js";
+import "chartjs-adapter-moment";
 
 // Import utilities
-import { formatValue } from '../utils/Utils'
+import { formatValue } from "../utils/Utils";
 
-Chart.register(BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend)
+Chart.register(BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend);
 
 export default {
-  name: 'BarChart02',
-  props: ['data', 'width', 'height'],
+  name: "BarChart02",
+  props: ["data", "width", "height"],
   setup(props) {
+    const canvas = ref(null);
+    let chart = null;
 
-    const canvas = ref(null)
-    let chart = null
-    
     onMounted(() => {
-      const ctx = canvas.value
+      const ctx = canvas.value;
       chart = new Chart(ctx, {
-        type: 'bar',
+        type: "bar",
         data: props.data,
         options: {
           layout: {
@@ -45,17 +40,17 @@ export default {
               beginAtZero: true,
               ticks: {
                 maxTicksLimit: 5,
-                callback: (value) => formatValue(value),
+                callback: value => formatValue(value),
               },
             },
             x: {
               stacked: true,
-              type: 'time',
+              type: "time",
               time: {
-                parser: 'MM-DD-YYYY',
-                unit: 'month',
+                parser: "MM-DD-YYYY",
+                unit: "month",
                 displayFormats: {
-                  month: 'MMM YY',
+                  month: "MMM YY",
                 },
               },
               grid: {
@@ -75,13 +70,13 @@ export default {
             tooltip: {
               callbacks: {
                 title: () => false, // Disable tooltip title
-                label: (context) => formatValue(context.parsed.y),
+                label: context => formatValue(context.parsed.y),
               },
             },
           },
           interaction: {
             intersect: false,
-            mode: 'nearest',
+            mode: "nearest",
           },
           animation: {
             duration: 200,
@@ -89,14 +84,18 @@ export default {
           maintainAspectRatio: false,
           resizeDelay: 200,
         },
-      })
-    })
+      });
+    });
 
-    onUnmounted(() => chart.destroy())
+    onUnmounted(() => chart.destroy());
 
     return {
       canvas,
-    }
-  }
-}
+    };
+  },
+};
 </script>
+
+<template>
+  <canvas ref="canvas" :data="data" :width="width" :height="height" />
+</template>

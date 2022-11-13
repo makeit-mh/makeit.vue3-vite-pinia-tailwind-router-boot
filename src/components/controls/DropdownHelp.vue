@@ -1,3 +1,49 @@
+<script>
+import { onMounted, onUnmounted, ref } from "vue";
+
+export default {
+  name: "DropdownHelp",
+  props: ["align"],
+  setup() {
+    const dropdownOpen = ref(false);
+    const trigger = ref(null);
+    const dropdown = ref(null);
+
+    // close on click outside
+    const clickHandler = ({ target }) => {
+      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target)) {
+        return;
+      }
+      dropdownOpen.value = false;
+    };
+
+    // close if the esc key is pressed
+    const keyHandler = ({ keyCode }) => {
+      if (!dropdownOpen.value || keyCode !== 27) {
+        return;
+      }
+      dropdownOpen.value = false;
+    };
+
+    onMounted(() => {
+      document.addEventListener("click", clickHandler);
+      document.addEventListener("keydown", keyHandler);
+    });
+
+    onUnmounted(() => {
+      document.removeEventListener("click", clickHandler);
+      document.removeEventListener("keydown", keyHandler);
+    });
+
+    return {
+      dropdownOpen,
+      trigger,
+      dropdown,
+    };
+  },
+};
+</script>
+
 <template>
   <div class="relative inline-flex">
     <button
@@ -5,8 +51,8 @@
       class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition duration-150 rounded-full"
       :class="{ 'bg-gray-200': dropdownOpen }"
       aria-haspopup="true"
-      @click.prevent="dropdownOpen = !dropdownOpen"
       :aria-expanded="dropdownOpen"
+      @click.prevent="dropdownOpen = !dropdownOpen"
     >
       <span class="sr-only">Info</span>
       <svg class="w-4 h-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -21,8 +67,10 @@
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-show="dropdownOpen" class="origin-top-right z-10 absolute top-full min-w-44 bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1"  :class="align === 'right' ? 'right-0' : 'left-0'">
-        <div class="text-xs font-semibold text-gray-400 uppercase pt-1.5 pb-2 px-3">Need help?</div>
+      <div v-show="dropdownOpen" class="min-w-44 origin-top-right z-10 absolute top-full bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1" :class="align === 'right' ? 'right-0' : 'left-0'">
+        <div class="text-xs font-semibold text-gray-400 uppercase pt-1.5 pb-2 px-3">
+          Need help?
+        </div>
         <ul
           ref="dropdown"
           @focusin="dropdownOpen = true"
@@ -54,50 +102,7 @@
             </router-link>
           </li>
         </ul>
-      </div> 
+      </div>
     </transition>
   </div>
 </template>
-
-<script>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-export default {
-  name: 'DropdownHelp',
-  props: ['align'],
-  setup() {
-
-    const dropdownOpen = ref(false)
-    const trigger = ref(null)
-    const dropdown = ref(null)
-
-    // close on click outside
-    const clickHandler = ({ target }) => {
-      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target)) return
-      dropdownOpen.value = false
-    }
-
-    // close if the esc key is pressed
-    const keyHandler = ({ keyCode }) => {
-      if (!dropdownOpen.value || keyCode !== 27) return
-      dropdownOpen.value = false
-    }
-
-    onMounted(() => {
-      document.addEventListener('click', clickHandler)
-      document.addEventListener('keydown', keyHandler)
-    })
-
-    onUnmounted(() => {
-      document.removeEventListener('click', clickHandler)
-      document.removeEventListener('keydown', keyHandler)
-    })
-
-    return {
-      dropdownOpen,
-      trigger,
-      dropdown,
-    }
-  }
-}
-</script>

@@ -1,43 +1,32 @@
-<template>
-  <div class="flex flex-col col-span-full sm:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
-    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
-      <h2 class="font-semibold text-gray-800">Sales Over Time (all stores)</h2>
-    </header>
-    <!-- Chart built with Chart.js 3 -->
-    <!-- Change the height attribute to adjust the chart height -->
-    <LineChart :data="chartData" width="595" height="248" />
-  </div>  
-</template>
-
 <script>
-import { ref } from 'vue'
-import LineChart from '../../charts/LineChart02.vue'
+import { ref } from "vue";
+import LineChart from "../../charts/LineChart02.vue";
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils'
+import { tailwindConfig } from "../../utils/Utils";
 
 export default {
-  name: 'DashboardCard08',
+  name: "DashboardCard08",
   components: {
     LineChart,
   },
   setup() {
     const chartData = ref({
       labels: [
-        '12-01-2020', '01-01-2021', '02-01-2021',
-        '03-01-2021', '04-01-2021', '05-01-2021',
-        '06-01-2021', '07-01-2021', '08-01-2021',
-        '09-01-2021', '10-01-2021', '11-01-2021',
-        '12-01-2021', '01-01-2022', '02-01-2022',
-        '03-01-2022', '04-01-2022', '05-01-2022',
-        '06-01-2022', '07-01-2022', '08-01-2022',
-        '09-01-2022', '10-01-2022', '11-01-2022',
-        '12-01-2022', '01-01-2023',
+        "12-01-2020", "01-01-2021", "02-01-2021",
+        "03-01-2021", "04-01-2021", "05-01-2021",
+        "06-01-2021", "07-01-2021", "08-01-2021",
+        "09-01-2021", "10-01-2021", "11-01-2021",
+        "12-01-2021", "01-01-2022", "02-01-2022",
+        "03-01-2022", "04-01-2022", "05-01-2022",
+        "06-01-2022", "07-01-2022", "08-01-2022",
+        "09-01-2022", "10-01-2022", "11-01-2022",
+        "12-01-2022", "01-01-2023",
       ],
       datasets: [
         // Indigo line
         {
-          label: 'Current',
+          label: "Current",
           data: [
             73, 64, 73, 69, 104, 104, 164,
             164, 120, 120, 120, 148, 142, 104,
@@ -54,7 +43,7 @@ export default {
         },
         // Blue line
         {
-          label: 'Previous',
+          label: "Previous",
           data: [
             184, 86, 42, 378, 42, 243, 38,
             120, 0, 0, 42, 0, 84, 0,
@@ -71,7 +60,7 @@ export default {
         },
         // Green line
         {
-          label: 'Average',
+          label: "Average",
           data: [
             122, 170, 192, 86, 102, 124, 115,
             115, 56, 104, 0, 72, 208, 186,
@@ -87,11 +76,24 @@ export default {
           pointBackgroundColor: tailwindConfig().theme.colors.green[500],
         },
       ],
-    })
+    });
 
     return {
       chartData,
-    } 
-  }
-}
+    };
+  },
+};
 </script>
+
+<template>
+  <div class="flex flex-col col-span-full sm:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
+    <header class="px-5 py-4 border-b border-gray-100 flex items-center">
+      <h2 class="font-semibold text-gray-800">
+        Sales Over Time (all stores)
+      </h2>
+    </header>
+    <!-- Chart built with Chart.js 3 -->
+    <!-- Change the height attribute to adjust the chart height -->
+    <LineChart :data="chartData" width="595" height="248" />
+  </div>
+</template>

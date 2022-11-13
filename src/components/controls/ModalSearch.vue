@@ -57,7 +57,7 @@ export default {
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
-    <div v-show="modalOpen" class="          fixed inset-0 z-50 bg-gray-900 bg-opacity-30 transition-opacity" aria-hidden="true" />
+    <div v-show="modalOpen" class="bg-opacity/30 fixed inset-0 z-50 bg-gray-900 transition-opacity" aria-hidden="true" />
   </transition>
   <!-- Modal dialog -->
   <transition

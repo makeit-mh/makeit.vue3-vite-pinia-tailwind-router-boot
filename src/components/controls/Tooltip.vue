@@ -1,10 +1,68 @@
+<script>
+import { ref } from "vue";
+
+export default {
+  name: "Tooltip",
+  props: ["bg", "size", "position"],
+  setup() {
+    const tooltipOpen = ref(false);
+
+    const positionOuterClasses = (position) => {
+      switch (position) {
+        case "right":
+          return "left-full top-1/2 transform -translate-y-1/2";
+        case "left":
+          return "right-full top-1/2 transform -translate-y-1/2";
+        case "bottom":
+          return "top-full left-1/2 transform -translate-x-1/2";
+        default:
+          return "bottom-full left-1/2 transform -translate-x-1/2";
+      }
+    };
+
+    const sizeClasses = (size) => {
+      switch (size) {
+        case "lg":
+          return "min-w-72  p-3";
+        case "md":
+          return "min-w-56 p-3";
+        case "sm":
+          return "min-w-44 p-2";
+        default:
+          return "p-2";
+      }
+    };
+
+    const positionInnerClasses = (position) => {
+      switch (position) {
+        case "right":
+          return "ml-2";
+        case "left":
+          return "mr-2";
+        case "bottom":
+          return "mt-2";
+        default:
+          return "mb-2";
+      }
+    };
+
+    return {
+      tooltipOpen,
+      positionOuterClasses,
+      sizeClasses,
+      positionInnerClasses,
+    };
+  },
+};
+</script>
+
 <template>
   <div
     class="relative"
     @mouseenter="tooltipOpen = true"
     @mouseleave="tooltipOpen = false"
     @focusin="tooltipOpen = true"
-    @focusout="tooltipOpen = false"    
+    @focusout="tooltipOpen = false"
   >
     <button
       class="block"
@@ -30,8 +88,8 @@
           :class="[
             bg === 'dark' ? 'bg-gray-800' : 'bg-white border border-gray-200 shadow-lg',
             sizeClasses(size),
-            positionInnerClasses(position)
-          ]"          
+            positionInnerClasses(position),
+          ]"
         >
           <slot />
         </div>
@@ -39,62 +97,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from 'vue'
-
-export default {
-  name: 'Tooltip',
-  props: ['bg', 'size', 'position'],
-  setup() {
-
-    const tooltipOpen = ref(false)
-
-    const positionOuterClasses = (position) => {
-      switch (position) {
-        case 'right':
-          return 'left-full top-1/2 transform -translate-y-1/2';
-        case 'left':
-          return 'right-full top-1/2 transform -translate-y-1/2';
-        case 'bottom':
-          return 'top-full left-1/2 transform -translate-x-1/2';
-        default:
-          return 'bottom-full left-1/2 transform -translate-x-1/2';
-      }
-    }
-    
-  const sizeClasses = (size) => {
-    switch (size) {
-      case 'lg':
-        return 'min-w-72  p-3';
-      case 'md':
-        return 'min-w-56 p-3';
-      case 'sm':
-        return 'min-w-44 p-2';
-      default:
-        return 'p-2';
-    }
-  }
-
-  const positionInnerClasses = (position) => {
-    switch (position) {
-      case 'right':
-        return 'ml-2';
-      case 'left':
-        return 'mr-2';
-      case 'bottom':
-        return 'mt-2';
-      default:
-        return 'mb-2';
-    }
-  }    
-
-    return {
-      tooltipOpen,
-      positionOuterClasses,
-      sizeClasses,
-      positionInnerClasses,
-    }
-  }
-}
-</script>

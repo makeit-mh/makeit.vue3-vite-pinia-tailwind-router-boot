@@ -1,14 +1,23 @@
+<script>
+export default {
+  name: "DashboardCard12",
+};
+</script>
+
 <template>
   <div class="col-span-full xl:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
     <header class="px-5 py-4 border-b border-gray-100">
-      <h2 class="font-semibold text-gray-800">Recent Activity</h2>
+      <h2 class="font-semibold text-gray-800">
+        Recent Activity
+      </h2>
     </header>
     <div class="p-3">
-
       <!-- Card content -->
       <!-- "Today" group -->
       <div>
-        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">Today</header>
+        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">
+          Today
+        </header>
         <ul class="my-1">
           <!-- Item -->
           <li class="flex px-2">
@@ -19,7 +28,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a> mentioned <a class="font-medium text-gray-800" href="#0">Sara Smith</a> in a new post</div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a> mentioned <a class="font-medium text-gray-800" href="#0">Sara Smith</a> in a new post
+                </div>
                 <div class="shrink-0 self-end ml-2">
                   <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">View<span class="hidden sm:inline"> -&gt;</span></a>
                 </div>
@@ -35,7 +46,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center">The post <a class="font-medium text-gray-800" href="#0">Post Name</a> was removed by <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a></div>
+                <div class="self-center">
+                  The post <a class="font-medium text-gray-800" href="#0">Post Name</a> was removed by <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a>
+                </div>
                 <div class="shrink-0 self-end ml-2">
                   <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">View<span class="hidden sm:inline"> -&gt;</span></a>
                 </div>
@@ -51,7 +64,9 @@
             </div>
             <div class="grow flex items-center text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Patrick Sullivan</a> published a new <a class="font-medium text-gray-800" href="#0">post</a></div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Patrick Sullivan</a> published a new <a class="font-medium text-gray-800" href="#0">post</a>
+                </div>
                 <div class="shrink-0 self-end ml-2">
                   <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">View<span class="hidden sm:inline"> -&gt;</span></a>
                 </div>
@@ -62,7 +77,9 @@
       </div>
       <!-- "Yesterday" group -->
       <div>
-        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">Yesterday</header>
+        <header class="text-xs uppercase text-gray-400 bg-gray-50 rounded-sm font-semibold p-2">
+          Yesterday
+        </header>
         <ul class="my-1">
           <!-- Item -->
           <li class="flex px-2">
@@ -73,7 +90,9 @@
             </div>
             <div class="grow flex items-center border-b border-gray-100 text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center"><a class="font-medium text-gray-800 hover:text-gray-900" href="#0">240+</a> users have subscribed to <a class="font-medium text-gray-800" href="#0">Newsletter #1</a></div>
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">240+</a> users have subscribed to <a class="font-medium text-gray-800" href="#0">Newsletter #1</a>
+                </div>
                 <div class="shrink-0 self-end ml-2">
                   <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">View<span class="hidden sm:inline"> -&gt;</span></a>
                 </div>
@@ -89,7 +108,9 @@
             </div>
             <div class="grow flex items-center text-sm py-2">
               <div class="grow flex justify-between">
-                <div class="self-center">The post <a class="font-medium text-gray-800" href="#0">Post Name</a> was suspended by <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a></div>
+                <div class="self-center">
+                  The post <a class="font-medium text-gray-800" href="#0">Post Name</a> was suspended by <a class="font-medium text-gray-800 hover:text-gray-900" href="#0">Nick Mark</a>
+                </div>
                 <div class="shrink-0 self-end ml-2">
                   <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">View<span class="hidden sm:inline"> -&gt;</span></a>
                 </div>
@@ -98,13 +119,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'DashboardCard12',
-}
-</script>
