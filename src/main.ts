@@ -7,7 +7,7 @@ import { registerStore } from "./store";
 import App from "~/App.vue";
 
 import "~/styles/tailwind.css";
-import "~/styles/main.scss";
+import "~/styles/app.scss";
 
 const app = createApp(App);
 
