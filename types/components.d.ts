@@ -3,10 +3,11 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export { }
+export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppHeader: typeof import('./../src/components/layout/Navbar/components/AppHeader.vue')['default']
     BarChart01: typeof import('./../src/components/charts/BarChart01.vue')['default']
     BarChart02: typeof import('./../src/components/charts/BarChart02.vue')['default']
     BarChart03: typeof import('./../src/components/charts/BarChart03.vue')['default']
@@ -18,7 +19,6 @@ declare module '@vue/runtime-core' {
     DropdownNotifications: typeof import('./../src/components/controls/DropdownNotifications.vue')['default']
     DropdownProfile: typeof import('./../src/components/controls/DropdownProfile.vue')['default']
     Footer: typeof import('./../src/components/layout/Footer/index.vue')['default']
-    Header: typeof import('../src/components/layout/Navbar/components/AppHeader.vue')['default']
     LineChart01: typeof import('./../src/components/charts/LineChart01.vue')['default']
     LineChart02: typeof import('./../src/components/charts/LineChart02.vue')['default']
     ModalSearch: typeof import('./../src/components/controls/ModalSearch.vue')['default']
