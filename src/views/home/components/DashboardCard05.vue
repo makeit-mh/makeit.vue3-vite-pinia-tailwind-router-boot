@@ -1,10 +1,10 @@
 <script>
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
-import Tooltip from "../../components/Tooltip.vue";
-import RealtimeChart from "../../charts/RealtimeChart.vue";
+import Tooltip from "~/components/controls/Tooltip.vue";
+import RealtimeChart from "~/components/charts/RealtimeChart.vue";
 
 // Import utilities
-import { hexToRGB, tailwindConfig } from "../../utils/Utils";
+import { hexToRGB, tailwindConfig } from "~/utils/Utils";
 
 export default {
   name: "DashboardCard05",

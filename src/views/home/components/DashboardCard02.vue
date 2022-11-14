@@ -1,11 +1,11 @@
 <script>
 import { ref } from "vue";
-import LineChart from "../../charts/LineChart01.vue";
-import Icon from "../../images/icon-02.svg";
-import EditMenu from "../../components/DropdownEditMenu.vue";
+import LineChart from "~/components/charts/LineChart01.vue";
+import Icon from "~/assets/images/icon-02.svg";
+import EditMenu from "~/components/controls/DropdownEditMenu.vue";
 
 // Import utilities
-import { hexToRGB, tailwindConfig } from "../../utils/Utils";
+import { hexToRGB, tailwindConfig } from "~/utils/Utils";
 
 export default {
   name: "DashboardCard01",
