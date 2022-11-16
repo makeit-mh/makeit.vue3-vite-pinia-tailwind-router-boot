@@ -1,6 +1,8 @@
 <script>
 import { ref } from "vue";
 
+import ThemeChange from "./ThemeChange.vue";
+
 import SearchModal from "~/components/controls/ModalSearch.vue";
 import Notifications from "~/components/controls/DropdownNotifications.vue";
 import Help from "~/components/controls/DropdownHelp.vue";
@@ -13,6 +15,7 @@ export default {
     Notifications,
     Help,
     UserMenu,
+    ThemeChange,
   },
   props: ["sidebarOpen"],
   emits: ["toggleSidebar"],
@@ -59,6 +62,7 @@ export default {
           <SearchModal id="search-modal" search-id="search" :modal-open="searchModalOpen" @open-modal="searchModalOpen = true" @close-modal="searchModalOpen = false" />
           <Notifications align="right" />
           <Help align="right" />
+          <ThemeChange />
           <!-- Divider -->
           <hr class="w-px h-6 bg-gray-200">
           <UserMenu align="right" />
