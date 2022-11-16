@@ -6,8 +6,8 @@ import index from "./router";
 import { registerStore } from "./store";
 import App from "~/App.vue";
 
-import "~/styles/tailwind.css";
-import "~/styles/app.scss";
+import "~/css/tailwind.css";
+import "~/css/app.scss";
 
 const app = createApp(App);
 

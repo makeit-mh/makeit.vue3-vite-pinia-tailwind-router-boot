@@ -7,7 +7,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppFooter: typeof import('./../src/components/layout/Footer/components/AppFooter.vue')['default']
     AppHeader: typeof import('./../src/components/layout/Navbar/components/AppHeader.vue')['default']
+    AppPanel: typeof import('./../src/components/layout/Panel/components/AppPanel.vue')['default']
+    AppSidebar: typeof import('./../src/components/layout/Sidebar/components/AppSidebar.vue')['default']
+    AppSidebarLinkGroup: typeof import('./../src/components/layout/Sidebar/components/AppSidebarLinkGroup.vue')['default']
     BarChart01: typeof import('./../src/components/charts/BarChart01.vue')['default']
     BarChart02: typeof import('./../src/components/charts/BarChart02.vue')['default']
     BarChart03: typeof import('./../src/components/charts/BarChart03.vue')['default']
@@ -23,11 +27,11 @@ declare module '@vue/runtime-core' {
     LineChart02: typeof import('./../src/components/charts/LineChart02.vue')['default']
     ModalSearch: typeof import('./../src/components/controls/ModalSearch.vue')['default']
     Navbar: typeof import('./../src/components/layout/Navbar/index.vue')['default']
+    Panel: typeof import('./../src/components/layout/Panel/index.vue')['default']
     RealtimeChart: typeof import('./../src/components/charts/RealtimeChart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./../src/components/layout/Sidebar/index.vue')['default']
-    SidebarLinkGroup: typeof import('./../src/components/layout/Sidebar/components/SidebarLinkGroup.vue')['default']
     ThemeChange: typeof import('./../src/components/layout/Navbar/components/ThemeChange.vue')['default']
     Tooltip: typeof import('./../src/components/controls/Tooltip.vue')['default']
   }

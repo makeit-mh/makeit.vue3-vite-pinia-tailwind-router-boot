@@ -5,7 +5,7 @@ export default {
   name: "Banner",
   props: ["open"],
   setup() {
-    const openBanner = ref(props.open);
+    const openBanner = ref(true);
     return {
       openBanner,
     };

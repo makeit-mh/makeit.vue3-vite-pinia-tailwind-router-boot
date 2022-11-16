@@ -4,7 +4,7 @@ import EditMenu from "~/components/controls/DropdownEditMenu.vue";
 import LineChart from "~/components/charts/LineChart01.vue";
 
 // Import utilities
-import { hexToRGB, tailwindConfig } from "~/utils/Utils";
+import { hexToRGB, tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard01",
@@ -75,7 +75,7 @@ export default {
     <div class="px-5 pt-5">
       <header class="flex justify-between items-start mb-2">
         <!-- Icon -->
-        <img src="../../images/icon-01.svg" width="32" height="32" alt="Icon 01">
+        <img src="../../../images/icon-01.svg" width="32" height="32" alt="Icon 01">
         <EditMenu align="right" class="relative inline-flex">
           <li>
             <a class="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3" href="#0">Option 1</a>

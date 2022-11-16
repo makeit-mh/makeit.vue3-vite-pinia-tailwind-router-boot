@@ -18,8 +18,8 @@
     "build": "vite build",
     "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint --ext .js,.vue",
+    "lint:fix": "eslint --ext .js,.vue --fix",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm"
   },
@@ -59,6 +59,6 @@
     "vue-tsc": "^0.40.13"
   },
   "lint-staged": {
-    "**/*": "eslint --fix"
+     "**/*.{js,vue}": ["npm run lint:fix"]
   }
 }

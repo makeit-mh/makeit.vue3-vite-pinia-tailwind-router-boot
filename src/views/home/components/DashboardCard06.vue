@@ -3,7 +3,7 @@ import { ref } from "vue";
 import DoughnutChart from "~/components/charts/DoughnutChart.vue";
 
 // Import utilities
-import { tailwindConfig } from "~/utils/Utils";
+import { tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard06",

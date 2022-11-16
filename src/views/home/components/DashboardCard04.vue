@@ -3,7 +3,7 @@ import { ref } from "vue";
 import BarChart from "~/components/charts/BarChart01.vue";
 
 // Import utilities
-import { tailwindConfig } from "~/utils/Utils";
+import { tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard03",

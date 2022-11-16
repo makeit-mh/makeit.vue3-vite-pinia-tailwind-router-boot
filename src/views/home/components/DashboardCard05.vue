@@ -4,7 +4,7 @@ import Tooltip from "~/components/controls/Tooltip.vue";
 import RealtimeChart from "~/components/charts/RealtimeChart.vue";
 
 // Import utilities
-import { hexToRGB, tailwindConfig } from "~/utils/Utils";
+import { hexToRGB, tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard05",

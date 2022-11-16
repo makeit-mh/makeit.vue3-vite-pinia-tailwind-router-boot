@@ -4,7 +4,7 @@ import BarChart from "~/components/charts/BarChart02.vue";
 import Tooltip from "~/components/controls/Tooltip.vue";
 
 // Import utilities
-import { tailwindConfig } from "~/utils/Utils";
+import { tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard09",

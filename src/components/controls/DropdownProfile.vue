@@ -1,6 +1,6 @@
 <script>
 import { onMounted, onUnmounted, ref } from "vue";
-import UserAvatar from "../images/user-avatar-32.png";
+import UserAvatar from "~/images/user-avatar-32.png";
 
 export default {
   name: "DropdownProfile",

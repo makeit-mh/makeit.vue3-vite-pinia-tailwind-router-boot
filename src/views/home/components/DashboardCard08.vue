@@ -3,7 +3,7 @@ import { ref } from "vue";
 import LineChart from "~/components/charts/LineChart02.vue";
 
 // Import utilities
-import { tailwindConfig } from "~/utils/Utils";
+import { tailwindConfig } from "~/utils/utils";
 
 export default {
   name: "DashboardCard08",

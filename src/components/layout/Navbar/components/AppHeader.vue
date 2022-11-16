@@ -1,10 +1,10 @@
 <script>
 import { ref } from "vue";
 
-import SearchModal from "../components/ModalSearch.vue";
-import Notifications from "../components/DropdownNotifications.vue";
-import Help from "../components/DropdownHelp.vue";
-import UserMenu from "../components/DropdownProfile.vue";
+import SearchModal from "~/components/controls/ModalSearch.vue";
+import Notifications from "~/components/controls/DropdownNotifications.vue";
+import Help from "~/components/controls/DropdownHelp.vue";
+import UserMenu from "~/components/controls/DropdownProfile.vue";
 
 export default {
   name: "AppHeader",
