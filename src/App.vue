@@ -3,8 +3,7 @@ import { logLabeled } from "./utils/logger";
 import AppNavbar from "./components/layout/Navbar/index.vue";
 import AppSidebar from "./components/layout/Sidebar/index.vue";
 import AppFooter from "./components/layout/Footer/index.vue";
-import AppPanel from "./components/layout/Panel/index.vue";
-logLabeled("App boosted!  ⸜(๑'ᵕ'๑)⸝⋆*", "log", "", "color: #66cc11");
+logLabeled("App boosted!!!", "log", "", "color: #66cc11");
 
 const sidebarOpen = ref(false);
 </script>
@@ -13,15 +12,16 @@ const sidebarOpen = ref(false);
   <div class="flex h-screen overflow-hidden">
     <!-- Sidebar -->
     <AppSidebar :sidebar-open="sidebarOpen" @close-sidebar="sidebarOpen = false" />
-    <!-- Content area -->
-    aaaaaaaaaaaaaaaaa
 
-    <!-- Site header -->
-    <AppNavbar :sidebar-open="sidebarOpen" @toggle-sidebar="sidebarOpen = !sidebarOpen" />cccc
-    <AppPanel>
-      dddd
-    </AppPanel>
-    <RouterView />
-    <AppFooter />
+    <!-- Content area -->
+    <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+      <!-- Site header -->
+      <AppHeader :sidebar-open="sidebarOpen" @toggle-sidebar="sidebarOpen = !sidebarOpen" />
+      <main>
+        <div class="max-w-9xl px-4 sm:px-6 lg:px-8 py-8 w-full mx-auto">
+          <RouterView />
+        </div>
+      </main>
+    </div>
   </div>
 </template>

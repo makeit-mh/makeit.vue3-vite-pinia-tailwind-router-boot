@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import AppHeader from "./components/AppHeader.vue";
 import ThemeChange from "./components/ThemeChange.vue";
 </script>
 
 <template>
-  <div
+  <AppHeader />
+  <!-- <div
     class="sticky top-0 z-30 flex h-16 w-full justify-center text-base-content opacity-90 backdrop-blur transition-all duration-100"
   >
     <nav class="navbar w-full">
@@ -51,5 +53,5 @@ import ThemeChange from "./components/ThemeChange.vue";
         </span>
       </div>
     </nav>
-  </div>
+  </div> -->
 </template>
