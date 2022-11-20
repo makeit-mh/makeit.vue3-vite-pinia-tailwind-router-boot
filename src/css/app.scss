@@ -1,5 +1,19 @@
-@import "variables";
-@import "nprogress";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import "styles/variables";
+@import "styles/nprogress"; 
+@import 'styles/utility-patterns.css';
+@import 'styles/range-slider.css';
+@import 'styles/toggle-switch.css';
+@import 'styles/flatpickr.css';
+@import 'styles/theme.css';
+
+
+@import 'tailwindcss/utilities';
+ 
 html.dark {
   //background: #22272e;
 }

@@ -1,4 +1,8 @@
 /* Typography */
+.wielki-test{
+	color:red;
+}
+
 .h1 {
     @apply text-4xl font-extrabold tracking-tighter;
 }
