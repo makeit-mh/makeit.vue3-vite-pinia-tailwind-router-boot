@@ -2,18 +2,18 @@
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-
-@import "styles/variables";
-@import "styles/nprogress"; 
+ 
 @import 'styles/utility-patterns.css';
 @import 'styles/range-slider.css';
 @import 'styles/toggle-switch.css';
 @import 'styles/flatpickr.css';
 @import 'styles/theme.css';
-
-
+ 
 @import 'tailwindcss/utilities';
  
+@import "styles/variables.scss";
+@import "styles/nprogress.scss"; 
+
 html.dark {
   //background: #22272e;
 }

@@ -6,7 +6,7 @@ import index from "./router";
 import { registerStore } from "./store";
 import App from "~/App.vue";
 
-import "~/css/app.scss";
+import "~/css/app.css";
 
 const app = createApp(App);
 
